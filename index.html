@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Mobile</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0.655rem;
+            color: #E0E0E0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: #1A1A2E;
+        }
+        .content-box{
+            padding-top: 0.1rem;
+            border-radius: 0.4rem;
+            margin: 0;
+            background-color: #FFB300;
+        }
+        .cabecalho{
+            background-color: #4CAF50;
+            border-radius: 0.4rem;
+            border: solid 1px #444444;
+        }
+        .center{
+            padding: 0.655rem;
+        }
+        h2{
+            font-size: 1rem;
+            color: #1A1A2E;
+        }
+        .form1{
+            border: 0;
+            background-color: #f1a900;
+            border-radius: 0.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .q{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .text-q{
+            display: flex;
+            flex-direction: column;
+        }
+        .text-i{
+            background-color: #E0E0E0;
+            border-radius: 0.4rem;
+            padding: 0.2rem;
+            color: #1A1A2E;
+        }
+        .radio-q{
+            display: flex;
+            justify-content: center;
+        }
+        input:focus{
+            outline: none;
+            border: solid 2px #4CAF50;
+        }
+        label{
+            color: #1A1A2E;
+        }
+        .r{
+            margin-top: 0;
+        }
+        button{
+            background-color: #1A1A2E;
+            border-radius: 0.4rem;
+            padding: 0.3rem;
+            margin: 0;
+        }
+        #h2Big{
+            color: white;
+            font-size: 20rem;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="content-box">
+        <div class="cabecalho">
+            <h1>Site para mobile</h1>
+        </div>
+        <div class="center">
+            <h2>Este site funcionara em celulares</h2>
+            <fieldset class="form1">
+                <div class="q">
+                    <div class="text-q">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="Nome" id="" class="text-i" placeholder="Digite seu nome:">
+                    </div>
+                </div>
+                <div class="q">
+                    <label for="funciona">O site funciona no seu?</label>
+                    <div class="radio-q">
+                        <label for="funciona">sim</label>
+                        <input type="radio" name="funciona" id="sim">
+                    </div>
+                    <div class="radio-q">
+                        <label for="funciona">Nao</label>
+                        <input type="radio" name="funciona" id="">
+                    </div>
+                </div>
+                <div class="r">
+                    <button onclick="thanks()">Enviar</button>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="thanks">
+        <h2 id="h2Big"></h2>
+    </div>
+    <script>
+        function thanks(){
+            
+            let resposta = document.getElementById("sim")
+            
+            let texto = document.getElementById("h2Big")
+
+            if(resposta.checked === true){
+                texto.innerHTML = "Muito obrigado por Responder!"
+            } else{
+                texto.innerHTML = "Que pena! mesmo assim muito obrigado!"
+            }
+        }
+    </script>
+</body>
+</html>
