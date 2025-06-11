@@ -78,7 +78,7 @@
         }
         #h2Big{
             color: white;
-            font-size: 20rem;
+            font-size: 1rem;
         }
     </style>
 
@@ -94,7 +94,7 @@
                 <div class="q">
                     <div class="text-q">
                         <label for="nome">Nome</label>
-                        <input type="text" name="Nome" id="" class="text-i" placeholder="Digite seu nome:">
+                        <input type="text" name="Nome" id="inputNome" class="text-i" placeholder="Digite seu nome:">
                     </div>
                 </div>
                 <div class="q">
@@ -124,10 +124,12 @@
             
             let texto = document.getElementById("h2Big")
 
+            let nome = document.getElementById("inputNome").value
+
             if(resposta.checked === true){
-                texto.innerHTML = "Muito obrigado por Responder!"
+                texto.innerHTML = "Muito obrigado por Responder "+ nome+ "!"
             } else{
-                texto.innerHTML = "Que pena! mesmo assim muito obrigado!"
+                texto.innerHTML = "Que pena "+ nome+ "! mesmo assim muito obrigado!"
             }
         }
     </script>
